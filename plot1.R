@@ -17,7 +17,7 @@ data$Sub_metering_3 <- as.numeric(data$Sub_metering_3)
 # Extract only 2 days from the dataset
 data1 <- subset(data, (Date >= "2007-02-01") & (Date <= "2007-02-02"))
 
-
+# build the plot and save it in a PNG file
 png("plot1.png", width=480, height=480)
 hist(data1$Global_active_power, col="red", main ="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency")
 dev.off()
